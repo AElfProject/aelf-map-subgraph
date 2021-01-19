@@ -1,6 +1,19 @@
-type Gravatar @entity {
+type Receipt @entity {
   id: ID!
-  owner: Bytes!
-  displayName: String!
-  imageUrl: String!
+  amount: BigDecimal!
+  sender: Account!
+  endTime: BigInt!
+  inviteCode: Invitor!
+}
+
+type Account @entity {
+  id: ID!
+  amount: BigDecimal!
+  receipts: [Receipt!]! @derivedFrom(field: "sender")
+}
+
+type Invitor @entity {
+  id: ID!
+  amount: BigDecimal!
+  receipts: [Receipt!]! @derivedFrom(field: "inviteCode")
 }
