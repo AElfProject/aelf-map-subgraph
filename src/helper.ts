@@ -1,6 +1,6 @@
 import {BigDecimal, BigInt} from "@graphprotocol/graph-ts/index";
 
-export let ELF_ADDRESS = '0xb5685232b185cadf7c5f58217722ac40bc4ec45e';
+export let ELF_ADDRESS = '0xbf2179859fc6d5bee9bf9158632dc51678a4100e';
 export let ZERO_BI = BigInt.fromI32(0)
 export let ZERO_BD = BigDecimal.fromString('0');
 export let ONE_BI = BigInt.fromI32(1)

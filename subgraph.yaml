@@ -6,10 +6,10 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: TokenMap
-    network: kovan
+    network: mainnet
     source:
-      address: '0x8fc5f0de3d2b577a8141856cc1a571a53cb39837'
-      startBlock: 23069941
+      address: '0x74a394aab7801d928b9f642068b3ea39ed40eb3f'
+      startBlock: 11754702
       abi: Map
     mapping:
       kind: ethereum/events

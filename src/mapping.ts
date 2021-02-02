@@ -5,7 +5,7 @@ import {
 } from '@graphprotocol/graph-ts';
 import {
   NewReceipt
-} from "./types/Gravity/Map";
+} from "./types/TokenMap/Map";
 import {
   Account,
   Receipt,
