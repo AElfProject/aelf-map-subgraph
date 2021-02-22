@@ -10,10 +10,26 @@ type Account @entity {
   id: ID!
   amount: BigDecimal!
   receipts: [Receipt!]! @derivedFrom(field: "sender")
+  inviteCodes: [InvitorAccountSnap!] @derivedFrom(field:"sender")
+}
+
+type InvitorAccountSnap @entity {
+  "inviteCode.id + '-' + account.id"
+  id: ID!
+  inviteCode: Invitor!
+  sender: Account!
+}
+
+type AccountCount @entity {
+  id: ID!
+  count: BigInt!
 }
 
 type Invitor @entity {
   id: ID!
   amount: BigDecimal!
   receipts: [Receipt!]! @derivedFrom(field: "inviteCode")
+  accounts: [InvitorAccountSnap!]! @derivedFrom(field: "inviteCode")
+  accountCount: BigInt!
+  receiptsCount: BigInt!
 }
